@@ -1,10 +1,10 @@
 ---
 layout: default
 ---
-
+<main id="main-content">
 <article class="page">
   {% if page.title and page.show_title != false and page.layout != "landingpage"  %}
-  <header>
+  <header aria-label="Page header">
     {% assign crumbs = page.url | split: '/' %}
     {% if crumbs.size > 2 %}
       <div class="breadcrumbs">
@@ -54,3 +54,4 @@ layout: default
   {% include related.html %}
   {% include feedback.html %}
 </article>
+</main>

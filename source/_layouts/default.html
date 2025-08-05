@@ -4,7 +4,8 @@
 
 {% include site/head.html %}
   <body {% if page.body_id %} id="{{ page.body_id }}"{% elsif page.layout == "landingpage" %} id="landingpage"{% endif %} class="{% if root == 'docs' or root == 'dashboards' or root == 'voice_control' or root == 'installation' or root == 'getting-started' or root == 'common-tasks' %}documentation-page{% endif %} {% if root == 'integrations' %}integration-page{% endif %} {% if page.blog_index %}blog-index{% endif %} {% if root == 'blog' %}blog-post {% if doc == 'categories' %}blog-category{% endif %}{% endif %}">
-    <header class='site-header {% if page.dark_header %}dark{% endif %}'>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class='site-header {% if page.dark_header %}dark{% endif %}' aria-label="Site header">
       {% include site/header.html %}
     </header>
 
@@ -62,7 +63,7 @@
         </div>
       </div>
 
-      <footer>
+      <footer aria-label="Site footer">
         {% include site/footer.html %}
       </footer>
 
